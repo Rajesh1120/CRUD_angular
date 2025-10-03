@@ -1,0 +1,82 @@
+<!-- <button
+  
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal"
+  class="btn btn-success btn-lg"
+>
+  Add Employee
+</button>
+<
+<app-mymodel> -->
+ 
+  <form #empForm="ngForm" (ngSubmit)="onAddEmployee(empForm)">
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input
+        type="text"
+        name="name"
+        [(ngModel)]="newEmp.name"
+        class="form-control"
+        placeholder="Enter name"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Role</label>
+      <select name="role" [(ngModel)]="newEmp.role" class="form-select" required>
+        <option value="">-- Select Role --</option>
+        <option>Tester</option>
+        <option>HR</option>
+        <option>Developer</option>
+        <option>QA</option>
+        <option>Manager</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Salary</label>
+      <input
+        type="number"
+        name="salary"
+        [(ngModel)]="newEmp.salary"
+        class="form-control"
+        placeholder="Enter salary"
+        required
+        min="1"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Status</label>
+      <select name="status" [(ngModel)]="newEmp.status" class="form-select" required>
+        <option value="">-- Select Status --</option>
+        <option>Inactive</option>
+        <option>Active</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-success btn-lg">Add Employee</button>
+    <!-- <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+    </div> -->
+  </form>
+
+  <!-- }@else{
+  <dl class="row">
+    <dt class="col-sm-4">ID</dt>
+    <dd class="col-sm-8">{{ selectedEmp?.id }}</dd>
+
+    <dt class="col-sm-4">Name</dt>
+    <dd class="col-sm-8">{{ selectedEmp?.name }}</dd>
+
+    <dt class="col-sm-4">Role</dt>
+    <dd class="col-sm-8">{{ selectedEmp?.role }}</dd>
+
+    <dt class="col-sm-4">Salary</dt>
+    <dd class="col-sm-8">{{ selectedEmp?.salary }}</dd>
+
+    <dt class="col-sm-4">Status</dt>
+    <dd class="col-sm-8">{{ selectedEmp?.status }}</dd>
+  </dl>
+
+  }
+</app-mymodel> --> 
