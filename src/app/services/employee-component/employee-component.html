@@ -1,0 +1,45 @@
+<p>employee-component works!</p>
+<select [(ngModel)]="selectDropDown" (ngModelChange)="fun(selectDropDown)" >
+    <option value="All">GetAllEmployee</option>
+    <option value="Male">GetMaleEmployee</option>
+    <option value="Female">GetFemaleEmployee</option>
+</select>
+<button (click)="toggleFun()">{{toggleFlag ? "Show Table":"Show Card"}}</button>
+@if(toggleFlag){
+<div class="container mt-4">
+    <table class="table table-striped table-hover table-bordered text-center align-middle">
+      <thead class="table-primary">
+        <tr>
+          <th>emp id</th>
+          <th>emp name</th>
+          <th>role</th>
+          <th>Gender</th>
+          <th>salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(emp of data; track $index){
+        <tr>
+          <td>{{ emp.id }}</td>
+          <td>{{ emp.name }}</td>
+          <td>{{ emp.role }}</td>
+          <td>{{emp.gender}}</td>
+          <td>{{ emp.salary }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+}@else{
+    @for(emp of data; track $index){
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h1>Employee Card</h1>
+            <h2 class="card-title">{{emp.name}}</h2>
+            <p class="card-text">{{emp.role}}</p>
+            <p class="card-text">{{emp.gender}}</p>
+            <p class="card-text">{{emp.salary}}</p>
+          </div>
+        </div>
+      }
+}
