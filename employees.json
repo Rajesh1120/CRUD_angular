@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "name": "RAJESH NALLA",
+      "username": "nalla",
+      "email": "rajeshn.700247@gmail.com",
+      "role": "Admin",
+      "id": "303d"
+    },
+    {
+      "id": "92a5",
+      "name": "RAJESH",
+      "username": "nallarajesh",
+      "email": "nallarajesh2000@gmail.com",
+      "role": "Admin"
+    },
+    {
+      "id": "209c",
+      "name": "Parcel Managment System",
+      "username": "nallarajesh",
+      "email": "nallarajesh2000@gmail.com",
+      "role": "User"
+    },
+    {
+      "id": "7c52",
+      "name": "Parcel Managment System",
+      "username": "nrajesh1120@gmail.com",
+      "email": "nrajesh1120@gmail.com",
+      "role": "User"
+    }
+  ]
+}

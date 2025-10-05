@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class DemoService {
   
   
-    constructor() { }
+    constructor() {}
   
     // Common logic: get current Date object
     private getCurrentDate(): Date {

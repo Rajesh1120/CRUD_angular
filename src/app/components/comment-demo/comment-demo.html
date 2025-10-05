@@ -1,0 +1,25 @@
+<div class="container mt-4">
+    <table class="table table-striped table-hover table-bordered text-center align-middle">
+      <thead class="table-primary">
+        <tr>
+          <th>emp id</th>
+          <th>emp name</th>
+          <th>emp Username</th>
+          <th>email</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        @for(emp of z; track $index){
+        <tr>
+          <td>{{ emp.postId }}</td>
+          <td>{{ emp.id }}</td>
+          <td>{{emp.name}}</td>
+          <td>{{ emp.body }}</td>
+        <td>{{emp.body}}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
